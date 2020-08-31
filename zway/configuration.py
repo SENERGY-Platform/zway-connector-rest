@@ -35,6 +35,7 @@ class ZwayConf:
     class Senergy:
         dt_devolo_wall_plug = "urn:infai:ses:device-type:1c200f02-67ac-42e1-8c6c-748bdc091764"
         dt_devolo_radiator_thermostat = "urn:infai:ses:device-type:9ae1f9eb-ebd6-4fb5-ae1f-a03d40c500ed"
+        dt_danfoss_radiator_thermostat = "urn:infai:ses:device-type:662d9c9f-949d-4577-9485-9cb7255f547f"
 
     @section
     class Logger:

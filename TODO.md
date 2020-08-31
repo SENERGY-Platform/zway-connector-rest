@@ -4,7 +4,7 @@
 * Devicetypes (manufacturer-manufacturerProductType-manufacturerProductId)
     - ~~2-5-373: urn:infai:ses:device-type:9ae1f9eb-ebd6-4fb5-ae1f-a03d40c500ed~~
     * ~~373-1-18: urn:infai:ses:device-type:1c200f02-67ac-42e1-8c6c-748bdc091764~~  
-    * 2-5-4: urn:infai:ses:device-type:662d9c9f-949d-4577-9485-9cb7255f547f
+    * ~~2-5-4: urn:infai:ses:device-type:662d9c9f-949d-4577-9485-9cb7255f547f~~
     * 134-4-80: urn:infai:ses:device-type:6c05a263-7318-47bf-a4af-a0d13cc95008
     * 373-2-14: urn:infai:ses:device-type:d4219e84-d14b-42be-9cd8-1afe4fd2afe5
     * 134-2-100: urn:infai:ses:device-type:39d1e71a-a5d2-4471-b251-466f60c7d398

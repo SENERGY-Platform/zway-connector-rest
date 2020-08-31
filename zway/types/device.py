@@ -16,12 +16,14 @@
 
 from .devices.devolo_wall_plug import DevoloWallPlug
 from .devices.devolo_radiator_thermostat import DevoloRadiatorThermostat
+from .devices.danfoss_radiator_thermostat import DanfossRadiatorThermostat
 
 __all__ = ('get_device_class', 'UnknownDeviceTypeError')
 
 type_map = {
     "373-1-18": DevoloWallPlug,
     "2-5-373": DevoloRadiatorThermostat,
+    "2-5-4": DanfossRadiatorThermostat,
 }
 
 

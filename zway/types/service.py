@@ -14,7 +14,8 @@
    limitations under the License.
 """
 
-__all__ = ('GetEnergyConsumption', 'GetOnOffState', 'GetPowerConsumption', 'SetOnState', 'SetOffState')
+__all__ = ('GetEnergyConsumption', 'GetOnOffState', 'GetPowerConsumption', 'SetOnState', 'SetOffState',
+           'GetBatteryState', 'GetTargetTemperature', 'GetTemperature', 'SetTargetTemperature')
 
 import cc_lib
 from cc_lib.types import Device
