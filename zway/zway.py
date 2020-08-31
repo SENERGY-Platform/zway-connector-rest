@@ -71,7 +71,7 @@ class Zway():
 
     def get_devices(self, since: int = 0) -> List[Device]:
         """Returns all devices registered at zway and converts them to platform devices. If needed, supply a unix timestamp and only receive devices that
-        have been added since """
+        have been added since"""
         zway_devices = self.get_physical_devices(since)
         platform_devices = []
 
@@ -86,13 +86,6 @@ class Zway():
             except UnknownDeviceTypeError:
                 logger.error("Unknown device detected, check debug log for details")
                 logger.debug(str(zway_device))
-            '''
-            if zway_device['data']['manufacturerId']['value'] == 373:
-                if zway_device['data']['manufacturerProductType']['value'] == 1:
-                    if zway_device['data']['manufacturerProductId']['value'] == 18:
-                        platform_devices.append(
-                            DevoloWallPlug(id, zway_device['data']['givenName']['value'] + '(#' + id + ')', {"connected": not zway_device['data']['isFailed']['value']}))
-            '''
 
         return platform_devices
 
@@ -121,10 +114,15 @@ class Zway():
         cc_conf.device.id_prefix = uuid
         return uuid
 
-    def run_control_cmd(self, id: str, instance: str, cmd_class: str, value: str):
+    def run_control_cmd(self, id: str, instance: str, cmd_class: str, value: str, subsection: str = None):
         self.ensure_login()
-        r = requests.post(endpoints["zwave_cmd"] + 'devices[' + id + '].instances[' + instance + '].commandClasses['
-                          + cmd_class + '].Set(' + value + ')', headers=self.auth_header, timeout=http_timeout)
+        url = endpoints["zwave_cmd"] + 'devices[' + id + '].instances[' + instance \
+              + '].commandClasses[' + cmd_class + '].Set( '
+        if subsection is not None:
+            url += subsection + ','
+        url += value + ')'
+
+        r = requests.post(url, headers=self.auth_header, timeout=http_timeout)
         if not r.ok:
             logger.error('Could not run zway control command, received code ' + str(r.status_code))
             return

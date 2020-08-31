@@ -47,7 +47,7 @@ class GetPowerConsumption(cc_lib.types.Service):
 
     @staticmethod
     def task(device: Device, zway):
-        return zway.run_measuring_cmd(device.id, '0', '37', '2')
+        return zway.run_measuring_cmd(device.id, '0', '50', '2')
 
 
 class SetOnState(cc_lib.types.Service):
@@ -64,3 +64,36 @@ class SetOffState(cc_lib.types.Service):
     @staticmethod
     def task(device: Device, zway):
         return zway.run_control_cmd(device.id, '0', '37', '0')
+
+
+class GetBatteryState(cc_lib.types.Service):
+    local_id = "get_level:128"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '0', '128')
+
+
+class GetTargetTemperature(cc_lib.types.Service):
+    local_id = "get_level:67-1"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '0', '67', '1')
+
+
+class GetTemperature(cc_lib.types.Service):
+    local_id = "get_level:49-1"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '0', '49', '1')
+
+
+class SetTargetTemperature(cc_lib.types.Service):
+    local_id = "exact:67-1"
+
+    @staticmethod
+    def task(device: Device, zway, level):
+        return zway.run_control_cmd(device.id, '0', '67', str(level), '1')
+

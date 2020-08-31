@@ -15,11 +15,13 @@
 """
 
 from .devices.devolo_wall_plug import DevoloWallPlug
+from .devices.devolo_radiator_thermostat import DevoloRadiatorThermostat
 
 __all__ = ('get_device_class', 'UnknownDeviceTypeError')
 
 type_map = {
-    "373-1-18": DevoloWallPlug
+    "373-1-18": DevoloWallPlug,
+    "2-5-373": DevoloRadiatorThermostat,
 }
 
 

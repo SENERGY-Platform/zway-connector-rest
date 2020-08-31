@@ -34,6 +34,7 @@ class ZwayConf:
     @section
     class Senergy:
         dt_devolo_wall_plug = "urn:infai:ses:device-type:1c200f02-67ac-42e1-8c6c-748bdc091764"
+        dt_devolo_radiator_thermostat = "urn:infai:ses:device-type:9ae1f9eb-ebd6-4fb5-ae1f-a03d40c500ed"
 
     @section
     class Logger:
@@ -57,5 +58,5 @@ config = ZwayConf('zway.conf', user_dir)
 if not all((config.Zway.url, config.Zway.username, config.Zway.password)):
     exit('Please provide zway information')
 
-if not all((config.Senergy.dt_devolo_wall_plug, )):
+if not all((config.Senergy.dt_devolo_wall_plug, config.Senergy.dt_devolo_radiator_thermostat)):
     exit('Please provide a SENERGY device and service types')
