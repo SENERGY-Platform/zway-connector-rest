@@ -33,7 +33,7 @@ class ZwayConf:
 
     @section
     class Senergy:
-        dt_devolo_wall_plug = None
+        dt_devolo_wall_plug = "urn:infai:ses:device-type:1c200f02-67ac-42e1-8c6c-748bdc091764"
 
     @section
     class Logger:
