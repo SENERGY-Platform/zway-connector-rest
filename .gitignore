@@ -1,0 +1,7 @@
+__pycache__
+.venv
+venv
+cc-lib
+zway.conf
+.idea
+*.iml
