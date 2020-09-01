@@ -2,7 +2,7 @@
 
 * ~~Devicetype Mapping~~
 * ~~Add ZwayDevice as intermediate class between cc lib Device and current device classes~~
-* Devicetypes (manufacturer-manufacturerProductType-manufacturerProductId)
+* ~~Devicetypes (manufacturer-manufacturerProductType-manufacturerProductId)~~
     - ~~2-5-373: urn:infai:ses:device-type:9ae1f9eb-ebd6-4fb5-ae1f-a03d40c500ed~~
     * ~~373-1-18: urn:infai:ses:device-type:1c200f02-67ac-42e1-8c6c-748bdc091764~~  
     * ~~2-5-4: urn:infai:ses:device-type:662d9c9f-949d-4577-9485-9cb7255f547f~~
@@ -19,7 +19,7 @@
     * ~~881-2-7: urn:infai:ses:device-type:305e2378-0ad1-48b4-89ab-84ee9cab94a7~~
     * ~~271-6913-4096: urn:infai:ses:device-type:7f1d4ee3-a456-431d-a4af-16b560650e98~~
     * ~~271-6657-4096: urn:infai:ses:device-type:37f59ac2-5606-411c-afa2-60e150b3db06~~
-    * 351-2305-12546: urn:infai:ses:device-type:cce425e5-3a76-4dbf-976f-3ad077bd61d2
+    * ~~351-2305-12546: urn:infai:ses:device-type:cce425e5-3a76-4dbf-976f-3ad077bd61d2~~
 * Code improvements
     * Error handling
         * key in dict
@@ -29,3 +29,4 @@
 * Event handling
 * Device provisioning (currently, creating a device will always be attempted)
 * Regular checking for changed devices (new devices, status changes)
+* Print unknown devices to file

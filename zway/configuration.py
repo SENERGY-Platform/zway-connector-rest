@@ -47,6 +47,7 @@ class ZwayConf:
         dt_aeotec_door_window_sensor_7 = "urn:infai:ses:device-type:305e2378-0ad1-48b4-89ab-84ee9cab94a7"
         dt_fibaro_walli_switch_2 = "urn:infai:ses:device-type:7f1d4ee3-a456-431d-a4af-16b560650e98"
         dt_fibaro_walli_switch = "urn:infai:ses:device-type:37f59ac2-5606-411c-afa2-60e150b3db06"
+        dt_mco_home_co2_monitor = "urn:infai:ses:device-type:cce425e5-3a76-4dbf-976f-3ad077bd61d2"
 
     @section
     class Logger:
@@ -76,5 +77,6 @@ if not all((config.Senergy.dt_devolo_wall_plug, config.Senergy.dt_devolo_radiato
             config.Senergy.dt_neo_coolcam_multisensor, config.Senergy.dt_cyrus_4in1_multisensor,
             config.Senergy.dt_fibaro_wall_plug_FGWPx102ZW5, config.Senergy.dt_fibaro_pir_g5,
             config.Senergy.dt_fibaro_the_button, config.Senergy.dt_aeotec_door_window_sensor_7,
-            config.Senergy.dt_fibaro_walli_switch_2, config.Senergy.dt_fibaro_walli_switch)):
+            config.Senergy.dt_fibaro_walli_switch_2, config.Senergy.dt_fibaro_walli_switch,
+            config.Senergy.dt_mco_home_co2_monitor)):
     exit('Please provide SENERGY device types')

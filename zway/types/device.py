@@ -30,6 +30,7 @@ from .devices.fibaro_the_button import FibaroTheButton
 from .devices.aeotec_door_window_sensor_7 import AeotecDoorWindowSensor7
 from .devices.fibaro_walli_switch_2 import FibaroWalliSwitch2
 from .devices.fibaro_walli_switch import FibaroWalliSwitch
+from .devices.mco_home_co2_monitor import McoHomeCO2Monitor
 
 __all__ = ('get_device_class', 'UnknownDeviceTypeError')
 
@@ -50,6 +51,7 @@ type_map = {
     "881-2-7": AeotecDoorWindowSensor7,
     "271-6913-4096": FibaroWalliSwitch2,
     "271-6657-4096": FibaroWalliSwitch,
+    "351-2305-12546": McoHomeCO2Monitor,
 }
 
 

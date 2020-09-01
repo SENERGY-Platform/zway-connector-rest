@@ -22,7 +22,8 @@ __all__ = (
     'GetMotionState_48_12', 'GetTamperState_113_7_8_A', 'GetPowerConsumption_49_4', 'GetToggleState_0_1_S',
     'SetToggle_0_1_S', 'GetOnOffState_113_6_Door_A', 'GetTiltState_48_11', 'GetEnergyConsumption_50_0__1',
     'GetEnergyConsumption_50_0__2', 'GetOnOffState_37__1', 'GetOnOffState_37__2', 'GetPowerConsumption_50_2__1',
-    'GetPowerConsumption_50_2__2', 'SetOnState_37__1', 'SetOnState_37__2', 'SetOffState_37__1', 'SetOffState_37__2')
+    'GetPowerConsumption_50_2__2', 'SetOnState_37__1', 'SetOnState_37__2', 'SetOffState_37__1', 'SetOffState_37__2',
+    'GetAlarm_13_3_1_A', 'GetCarbonDioxid_49_17')
 
 import cc_lib
 from cc_lib.types import Device
@@ -312,3 +313,19 @@ class GetTiltState_48_11():
     @staticmethod
     def task(device: Device, zway):
         return zway.run_measuring_cmd(device.id, '0', '48', '11')
+
+
+class GetAlarm_13_3_1_A():
+    local_id = "get_level:113-3-1-A"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '0', '113', '3-1-A')
+
+
+class GetCarbonDioxid_49_17():
+    local_id = "get_level:49-17"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '0', '49', '17')
