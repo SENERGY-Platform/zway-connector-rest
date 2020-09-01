@@ -19,7 +19,7 @@ __all__ = (
     'GetBatteryState_128', 'GetTargetTemperature_67_1', 'GetTemperature_49_1', 'SetTargetTemperature_67_1',
     'GetHumidity_49_5', 'GetLuminiscence_49_3', 'GetMotionState_48_1', 'GetTamperState_113_7_3_A',
     'GetUltraviolet_49_27', 'GetOnOffState_48_10', 'GetTamperState_48_8', 'SetOffState_38', 'SetOnState_38',
-    'GetMotionState_48_12', 'GetTamperState_113_7_8_A')
+    'GetMotionState_48_12', 'GetTamperState_113_7_8_A', 'GetPowerConsumption_49_4')
 
 import cc_lib
 from cc_lib.types import Device
@@ -189,3 +189,11 @@ class GetTamperState_113_7_8_A():
     @staticmethod
     def task(device: Device, zway):
         return zway.run_measuring_cmd(device.id, '0', '113', '7-8-A')
+
+
+class GetPowerConsumption_49_4():
+    local_id = "get_level:49-4"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '0', '49', '4')
