@@ -37,6 +37,7 @@ class ZwayConf:
         dt_devolo_radiator_thermostat = "urn:infai:ses:device-type:9ae1f9eb-ebd6-4fb5-ae1f-a03d40c500ed"
         dt_danfoss_radiator_thermostat = "urn:infai:ses:device-type:662d9c9f-949d-4577-9485-9cb7255f547f"
         dt_aeotec_indoor_siren = "urn:infai:ses:device-type:6c05a263-7318-47bf-a4af-a0d13cc95008"
+        dt_devolo_door_window_contact = "urn:infai:ses:device-type:d4219e84-d14b-42be-9cd8-1afe4fd2afe5"
 
     @section
     class Logger:
