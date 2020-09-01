@@ -13,14 +13,14 @@
 
 __all__ = ('device_type_map', 'DanfossRadiatorThermostat')
 
-from ..service import GetBatteryState, GetTargetTemperature, SetTargetTemperature
+from ..service import GetBatteryState_128, GetTargetTemperature_67_1, SetTargetTemperature_67_1
 from ..zway_device import ZwayDevice
 from ...configuration import config
 
 
 class DanfossRadiatorThermostat(ZwayDevice):
     device_type_id = config.Senergy.dt_danfoss_radiator_thermostat
-    services = (GetBatteryState, GetTargetTemperature, SetTargetTemperature)
+    services = (GetBatteryState_128, GetTargetTemperature_67_1, SetTargetTemperature_67_1)
 
 
 device_type_map = {

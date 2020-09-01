@@ -13,14 +13,14 @@
 
 __all__ = ('device_type_map', 'DevoloDoorWindowContact')
 
-from ..service import GetBatteryState, GetOnOffState48_10, GetTamperState, GetTemperature
+from ..service import GetBatteryState_128, GetOnOffState_48_10, GetTamperState_48_8, GetTemperature_49_1
 from ..zway_device import ZwayDevice
 from ...configuration import config
 
 
 class DevoloDoorWindowContact(ZwayDevice):
-    device_type_id = config.Senergy.devolo_door_window_contact
-    services = (GetBatteryState, GetOnOffState48_10, GetTamperState, GetTemperature)
+    device_type_id = config.Senergy.dt_devolo_door_window_contact
+    services = (GetBatteryState_128, GetOnOffState_48_10, GetTamperState_48_8, GetTemperature_49_1)
 
 
 device_type_map = {

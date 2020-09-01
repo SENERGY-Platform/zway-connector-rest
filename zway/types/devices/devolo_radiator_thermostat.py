@@ -13,14 +13,14 @@
 
 __all__ = ('device_type_map', 'DevoloRadiatorThermostat')
 
-from ..service import GetBatteryState, GetTargetTemperature, GetTemperature, SetTargetTemperature
+from ..service import GetBatteryState_128, GetTargetTemperature_67_1, GetTemperature_49_1, SetTargetTemperature_67_1
 from ..zway_device import ZwayDevice
 from ...configuration import config
 
 
 class DevoloRadiatorThermostat(ZwayDevice):
     device_type_id = config.Senergy.dt_devolo_radiator_thermostat
-    services = (GetBatteryState, GetTargetTemperature, GetTemperature, SetTargetTemperature)
+    services = (GetBatteryState_128, GetTargetTemperature_67_1, GetTemperature_49_1, SetTargetTemperature_67_1)
 
 
 device_type_map = {

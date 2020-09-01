@@ -13,14 +13,14 @@
 
 __all__ = ('device_type_map', 'DevoloWallPlug')
 
-from ..service import GetOnOffState, GetEnergyConsumption, GetPowerConsumption, SetOnState, SetOffState
+from ..service import GetOnOffState_37, GetEnergyConsumption_50_0, GetPowerConsumption_50_2, SetOnState_37, SetOffState_37
 from ..zway_device import ZwayDevice
 from ...configuration import config
 
 
 class DevoloWallPlug(ZwayDevice):
     device_type_id = config.Senergy.dt_devolo_wall_plug
-    services = (GetOnOffState, GetEnergyConsumption, GetPowerConsumption, SetOnState, SetOffState)
+    services = (GetOnOffState_37, GetEnergyConsumption_50_0, GetPowerConsumption_50_2, SetOnState_37, SetOffState_37)
 
 
 device_type_map = {

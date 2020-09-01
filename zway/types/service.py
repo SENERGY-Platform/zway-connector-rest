@@ -14,8 +14,8 @@
    limitations under the License.
 """
 
-__all__ = ('GetEnergyConsumption', 'GetOnOffState', 'GetPowerConsumption', 'SetOnState', 'SetOffState',
-           'GetBatteryState', 'GetTargetTemperature', 'GetTemperature', 'SetTargetTemperature')
+__all__ = ('GetEnergyConsumption_50_0', 'GetOnOffState_37', 'GetPowerConsumption_50_2', 'SetOnState_37', 'SetOffState_37',
+           'GetBatteryState_128', 'GetTargetTemperature_67_1', 'GetTemperature_49_1', 'SetTargetTemperature_67_1')
 
 import cc_lib
 from cc_lib.types import Device
@@ -27,7 +27,7 @@ logger = root_logger.getChild(__name__.split(".", 1)[-1])
 converter_pool = dict()
 
 
-class GetEnergyConsumption(cc_lib.types.Service):
+class GetEnergyConsumption_50_0(cc_lib.types.Service):
     local_id = "get_level:50-0"
 
     @staticmethod
@@ -35,7 +35,7 @@ class GetEnergyConsumption(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '50', '0')
 
 
-class GetOnOffState(cc_lib.types.Service):
+class GetOnOffState_37(cc_lib.types.Service):
     local_id = "get_level:37"
 
     @staticmethod
@@ -43,7 +43,7 @@ class GetOnOffState(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '37')
 
 
-class GetOnOffState48_10(cc_lib.types.Service):
+class GetOnOffState_48_10(cc_lib.types.Service):
     local_id = "get_level:48-10"
 
     @staticmethod
@@ -51,7 +51,7 @@ class GetOnOffState48_10(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '48', '10')
 
 
-class GetPowerConsumption(cc_lib.types.Service):
+class GetPowerConsumption_50_2(cc_lib.types.Service):
     local_id = "get_level:50-2"
 
     @staticmethod
@@ -59,7 +59,7 @@ class GetPowerConsumption(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '50', '2')
 
 
-class SetOnState(cc_lib.types.Service):
+class SetOnState_37(cc_lib.types.Service):
     local_id = "on:37"
 
     @staticmethod
@@ -67,7 +67,7 @@ class SetOnState(cc_lib.types.Service):
         return zway.run_control_cmd(device.id, '0', '37', '255')
 
 
-class SetOffState(cc_lib.types.Service):
+class SetOffState_37(cc_lib.types.Service):
     local_id = "off:37"
 
     @staticmethod
@@ -75,7 +75,7 @@ class SetOffState(cc_lib.types.Service):
         return zway.run_control_cmd(device.id, '0', '37', '0')
 
 
-class GetBatteryState(cc_lib.types.Service):
+class GetBatteryState_128(cc_lib.types.Service):
     local_id = "get_level:128"
 
     @staticmethod
@@ -83,7 +83,7 @@ class GetBatteryState(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '128')
 
 
-class GetTargetTemperature(cc_lib.types.Service):
+class GetTargetTemperature_67_1(cc_lib.types.Service):
     local_id = "get_level:67-1"
 
     @staticmethod
@@ -91,7 +91,7 @@ class GetTargetTemperature(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '67', '1')
 
 
-class GetTemperature(cc_lib.types.Service):
+class GetTemperature_49_1(cc_lib.types.Service):
     local_id = "get_level:49-1"
 
     @staticmethod
@@ -99,7 +99,7 @@ class GetTemperature(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '49', '1')
 
 
-class SetTargetTemperature(cc_lib.types.Service):
+class SetTargetTemperature_67_1(cc_lib.types.Service):
     local_id = "exact:67-1"
 
     @staticmethod
@@ -107,7 +107,7 @@ class SetTargetTemperature(cc_lib.types.Service):
         return zway.run_control_cmd(device.id, '0', '67', str(level), '1')
 
 
-class GetTamperState(cc_lib.types.Service):
+class GetTamperState_48_8(cc_lib.types.Service):
     local_id = "get_level:48-8"
 
     @staticmethod

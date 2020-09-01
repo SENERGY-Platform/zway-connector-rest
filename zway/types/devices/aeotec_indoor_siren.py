@@ -13,14 +13,14 @@
 
 __all__ = ('device_type_map', 'AeotecIndoorSiren')
 
-from ..service import GetOnOffState, SetOnState, SetOffState
+from ..service import GetOnOffState_37, SetOnState_37, SetOffState_37
 from ..zway_device import ZwayDevice
 from ...configuration import config
 
 
 class AeotecIndoorSiren(ZwayDevice):
     device_type_id = config.Senergy.dt_aeotec_indoor_siren
-    services = (GetOnOffState, SetOnState, SetOffState)
+    services = (GetOnOffState_37, SetOnState_37, SetOffState_37)
 
 
 device_type_map = {
