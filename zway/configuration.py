@@ -39,6 +39,7 @@ class ZwayConf:
         dt_aeotec_multisensor_gen_6 = "urn:infai:ses:device-type:39d1e71a-a5d2-4471-b251-466f60c7d398"
         dt_neo_coolcam_d_w_sensor = "urn:infai:ses:device-type:052d6e99-32f4-483f-967e-16341127ff89"
         dt_abus_led_light_SHLM10010 = "urn:infai:ses:device-type:af2a302f-51c7-4344-a8fc-894cfaebb1bd"
+        dt_neo_coolcam_multisensor = "urn:infai:ses:device-type:bec7e624-9a65-4a50-ab3d-d3fd8ce4bfe1"
 
     @section
     class Logger:
@@ -64,5 +65,6 @@ if not all((config.Zway.url, config.Zway.username, config.Zway.password)):
 if not all((config.Senergy.dt_devolo_wall_plug, config.Senergy.dt_devolo_radiator_thermostat,
             config.Senergy.dt_danfoss_radiator_thermostat, config.Senergy.dt_aeotec_indoor_siren,
             config.Senergy.dt_devolo_door_window_contact, config.Senergy.dt_aeotec_multisensor_gen_6,
-            config.Senergy.dt_neo_coolcam_d_w_sensor, config.Senergy.dt_abus_led_light_SHLM10010)):
+            config.Senergy.dt_neo_coolcam_d_w_sensor, config.Senergy.dt_abus_led_light_SHLM10010,
+            config.Senergy.dt_neo_coolcam_multisensor)):
     exit('Please provide a SENERGY device types')

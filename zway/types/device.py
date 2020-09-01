@@ -22,6 +22,7 @@ from .devices.devolo_door_window_contact import DevoloDoorWindowContact
 from .devices.aeotec_multisensor_gen_6 import AeotecMultiSensorGen6
 from .devices.neo_coolcam_d_w_sensor import NeoCoolcamDWSensor
 from .devices.abus_led_light_SHLM10010 import AbusLedLightSHLM10010
+from .devices.neo_coolcam_multisensor import NeoCoolcamMultiSensor
 
 __all__ = ('get_device_class', 'UnknownDeviceTypeError')
 
@@ -34,6 +35,7 @@ type_map = {
     "134-2-100": AeotecMultiSensorGen6,
     "600-3-4226": NeoCoolcamDWSensor,
     "1027-3-2": AbusLedLightSHLM10010,
+    "600-3-4237": NeoCoolcamMultiSensor,
 }
 
 
