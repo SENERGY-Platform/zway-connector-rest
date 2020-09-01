@@ -11,19 +11,21 @@
    limitations under the License.
 """
 
-__all__ = ('device_type_map', 'DevoloWallPlug')
+__all__ = ('device_type_map', 'AeotecMultiSensorGen6')
 
-from ..service import GetOnOffState_37, GetEnergyConsumption_50_0, GetPowerConsumption_50_2, SetOnState_37, \
-    SetOffState_37
+from ..service import GetBatteryState_128, GetHumidity_49_5, GetLuminiscence_49_3, GetMotionState_48_1, \
+    GetTamperState_113_7_3_A, GetTemperature_49_1, GetUltraviolet_49_27
 from ..zway_device import ZwayDevice
 from ...configuration import config
 
 
-class DevoloWallPlug(ZwayDevice):
-    device_type_id = config.Senergy.dt_devolo_wall_plug
-    services = (GetOnOffState_37, GetEnergyConsumption_50_0, GetPowerConsumption_50_2, SetOnState_37, SetOffState_37)
+class AeotecMultiSensorGen6(ZwayDevice):
+    device_type_id = config.Senergy.dt_aeotec_multisensor_gen_6
+    services = (
+        GetBatteryState_128, GetHumidity_49_5, GetLuminiscence_49_3, GetMotionState_48_1, GetTamperState_113_7_3_A,
+        GetTemperature_49_1, GetUltraviolet_49_27)
 
 
 device_type_map = {
-    "devolo_wall_plug": DevoloWallPlug,
+    "aeotec_multisensor_gen_6": AeotecMultiSensorGen6,
 }

@@ -8,7 +8,7 @@
     * ~~2-5-4: urn:infai:ses:device-type:662d9c9f-949d-4577-9485-9cb7255f547f~~
     * ~~134-4-80: urn:infai:ses:device-type:6c05a263-7318-47bf-a4af-a0d13cc95008~~
     * ~~373-2-14: urn:infai:ses:device-type:d4219e84-d14b-42be-9cd8-1afe4fd2afe5~~
-    * 134-2-100: urn:infai:ses:device-type:39d1e71a-a5d2-4471-b251-466f60c7d398
+    * ~~134-2-100: urn:infai:ses:device-type:39d1e71a-a5d2-4471-b251-466f60c7d398~~
     * 600-3-4237: urn:infai:ses:device-type:bec7e624-9a65-4a50-ab3d-d3fd8ce4bfe1
     * 265-8225-8449: urn:infai:ses:device-type:3cc09a10-1feb-4f8b-9390-8d08bf3ba22d
     * 271-1538-4097: urn:infai:ses:device-type:51aa4611-d2d2-4516-8555-4bd3f620b3bb
