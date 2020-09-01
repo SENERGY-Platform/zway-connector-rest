@@ -16,7 +16,7 @@
     * ~~271-3841-4096: urn:infai:ses:device-type:218f1705-fd74-4570-a8f0-dddd28e25cbb~~
     * ~~600-3-4226: urn:infai:ses:device-type:052d6e99-32f4-483f-967e-16341127ff89~~
     * ~~1027-3-2: urn:infai:ses:device-type:af2a302f-51c7-4344-a8fc-894cfaebb1bd~~ 
-    * 881-2-7: urn:infai:ses:device-type:305e2378-0ad1-48b4-89ab-84ee9cab94a7
+    * ~~881-2-7: urn:infai:ses:device-type:305e2378-0ad1-48b4-89ab-84ee9cab94a7~~
     * 271-6913-4096: urn:infai:ses:device-type:7f1d4ee3-a456-431d-a4af-16b560650e98
     * 271-6657-4096: urn:infai:ses:device-type:37f59ac2-5606-411c-afa2-60e150b3db06
     * 351-2305-12546: urn:infai:ses:device-type:cce425e5-3a76-4dbf-976f-3ad077bd61d2
