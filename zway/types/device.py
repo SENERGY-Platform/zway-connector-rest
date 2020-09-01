@@ -25,6 +25,7 @@ from .devices.abus_led_light_SHLM10010 import AbusLedLightSHLM10010
 from .devices.neo_coolcam_multisensor import NeoCoolcamMultiSensor
 from .devices.cyrus_4in1_multisensor import Cyrus4in1Multisensor
 from .devices.fibaro_wall_plug_FGWPx102ZW5 import FibaroWallPlugFGWPx102ZW5
+from .devices.fibaro_pir_g5 import FibaroPirG5
 
 __all__ = ('get_device_class', 'UnknownDeviceTypeError')
 
@@ -39,7 +40,8 @@ type_map = {
     "1027-3-2": AbusLedLightSHLM10010,
     "600-3-4237": NeoCoolcamMultiSensor,
     "265-8225-8449": Cyrus4in1Multisensor,
-    "271-1538-4097": FibaroWallPlugFGWPx102ZW5
+    "271-1538-4097": FibaroWallPlugFGWPx102ZW5,
+    "271-2049-4097": FibaroPirG5,
 }
 
 
