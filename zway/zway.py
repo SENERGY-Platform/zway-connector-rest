@@ -16,6 +16,8 @@
 import datetime
 import time
 from typing import List, Dict
+from os import sep
+from json import dump
 
 import requests
 from cc_lib._configuration.configuration import cc_conf
@@ -84,8 +86,11 @@ class Zway():
                     (id, zway_device['data']['givenName']['value'] + '(#' + id + ')',
                      {"connected": not zway_device['data']['isFailed']['value']}))
             except UnknownDeviceTypeError:
-                logger.error("Unknown device detected, check debug log for details")
-                logger.debug(str(zway_device))
+                logger.error("Unknown device detected")
+                path = 'storage' + sep + id + '.json'
+                with open(path, 'w') as f:
+                    dump(zway_device, f, indent=4)
+                    logger.info("Device info written to " + path)
 
         return platform_devices
 

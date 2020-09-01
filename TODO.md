@@ -29,4 +29,4 @@
 * Event handling
 * Device provisioning (currently, creating a device will always be attempted)
 * Regular checking for changed devices (new devices, status changes)
-* Print unknown devices to file
+* ~~Print unknown devices to file~~
