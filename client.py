@@ -38,16 +38,16 @@ def on_connect(client: cc_lib.client.Client):
     devices = device_manager.devices
     for device in devices.values():
         try:
-            if device.state["connected"]:
-                try:
-                    client.addDevice(device)  # TODO: differentiate adding/connecting
-                except DeviceAddError:
-                    logger.error("Device probably exists already")
+            client.addDevice(device)  # TODO: differentiate adding/connecting
+        except DeviceAddError:
+            logger.error("Device probably exists already")
+        if device.state["connected"]:
+            try:
                 client.connectDevice(device)
-            else:
-                logger.info("Skipping device " + device.id + ", Reason: Offline")
-        except cc_lib.client.DeviceConnectError:
-            pass
+            except cc_lib.client.DeviceConnectError:
+                pass
+        else:
+            logger.info("Skipping device " + device.id + ", Reason: Offline")
     connector_client.syncHub(list(devices.values()))
 
 
