@@ -20,6 +20,7 @@ from .devices.danfoss_radiator_thermostat import DanfossRadiatorThermostat
 from .devices.aeotec_indoor_siren import AeotecIndoorSiren
 from .devices.devolo_door_window_contact import DevoloDoorWindowContact
 from .devices.aeotec_multisensor_gen_6 import AeotecMultiSensorGen6
+from .devices.neo_coolcam_d_w_sensor import NeoCoolcamDWSensor
 
 __all__ = ('get_device_class', 'UnknownDeviceTypeError')
 
@@ -30,6 +31,7 @@ type_map = {
     "134-4-80": AeotecIndoorSiren,
     "373-2-14": DevoloDoorWindowContact,
     "134-2-100": AeotecMultiSensorGen6,
+    "600-3-4226": NeoCoolcamDWSensor,
 }
 
 

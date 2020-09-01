@@ -14,7 +14,6 @@
    limitations under the License.
 """
 
-
 from simple_conf import configuration, section
 from os import getcwd, makedirs
 from os.path import exists as path_exists
@@ -24,7 +23,6 @@ user_dir = '{}/storage'.format(getcwd())
 
 @configuration
 class ZwayConf:
-
     @section
     class Zway:
         url = "http://localhost:8083"
@@ -39,6 +37,7 @@ class ZwayConf:
         dt_aeotec_indoor_siren = "urn:infai:ses:device-type:6c05a263-7318-47bf-a4af-a0d13cc95008"
         dt_devolo_door_window_contact = "urn:infai:ses:device-type:d4219e84-d14b-42be-9cd8-1afe4fd2afe5"
         dt_aeotec_multisensor_gen_6 = "urn:infai:ses:device-type:39d1e71a-a5d2-4471-b251-466f60c7d398"
+        dt_neo_coolcam_d_w_sensor = "urn:infai:ses:device-type:052d6e99-32f4-483f-967e-16341127ff89"
 
     @section
     class Logger:
@@ -58,9 +57,11 @@ if not path_exists(user_dir):
 
 config = ZwayConf('zway.conf', user_dir)
 
-
 if not all((config.Zway.url, config.Zway.username, config.Zway.password)):
     exit('Please provide zway information')
 
-if not all((config.Senergy.dt_devolo_wall_plug, config.Senergy.dt_devolo_radiator_thermostat)):
-    exit('Please provide a SENERGY device and service types')
+if not all((config.Senergy.dt_devolo_wall_plug, config.Senergy.dt_devolo_radiator_thermostat,
+            config.Senergy.dt_danfoss_radiator_thermostat, config.Senergy.dt_aeotec_indoor_siren,
+            config.Senergy.dt_devolo_door_window_contact, config.Senergy.dt_aeotec_multisensor_gen_6,
+            config.Senergy.dt_neo_coolcam_d_w_sensor)):
+    exit('Please provide a SENERGY device types')
