@@ -20,7 +20,9 @@ __all__ = (
     'GetHumidity_49_5', 'GetLuminiscence_49_3', 'GetMotionState_48_1', 'GetTamperState_113_7_3_A',
     'GetUltraviolet_49_27', 'GetOnOffState_48_10', 'GetTamperState_48_8', 'SetOffState_38', 'SetOnState_38',
     'GetMotionState_48_12', 'GetTamperState_113_7_8_A', 'GetPowerConsumption_49_4', 'GetToggleState_0_1_S',
-    'SetToggle_0_1_S', 'GetOnOffState_113_6_Door_A', 'GetTiltState_48_11')
+    'SetToggle_0_1_S', 'GetOnOffState_113_6_Door_A', 'GetTiltState_48_11', 'GetEnergyConsumption_50_0__1',
+    'GetEnergyConsumption_50_0__2', 'GetOnOffState_37__1', 'GetOnOffState_37__2', 'GetPowerConsumption_50_2__1',
+    'GetPowerConsumption_50_2__2', 'SetOnState_37__1', 'SetOnState_37__2', 'SetOffState_37__1', 'SetOffState_37__2')
 
 import cc_lib
 from cc_lib.types import Device
@@ -40,12 +42,44 @@ class GetEnergyConsumption_50_0(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '50', '0')
 
 
+class GetEnergyConsumption_50_0__1(cc_lib.types.Service):
+    local_id = "get_level:50-0:1"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '1', '50', '0')
+
+
+class GetEnergyConsumption_50_0__2(cc_lib.types.Service):
+    local_id = "get_level:50-0:2"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '2', '50', '0')
+
+
 class GetOnOffState_37(cc_lib.types.Service):
     local_id = "get_level:37"
 
     @staticmethod
     def task(device: Device, zway):
         return zway.run_measuring_cmd(device.id, '0', '37')
+
+
+class GetOnOffState_37__1(cc_lib.types.Service):
+    local_id = "get_level:37:1"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '1', '37')
+
+
+class GetOnOffState_37__2(cc_lib.types.Service):
+    local_id = "get_level:37:2"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '2', '37')
 
 
 class GetOnOffState_48_10(cc_lib.types.Service):
@@ -64,12 +98,44 @@ class GetPowerConsumption_50_2(cc_lib.types.Service):
         return zway.run_measuring_cmd(device.id, '0', '50', '2')
 
 
+class GetPowerConsumption_50_2__1(cc_lib.types.Service):
+    local_id = "get_level:50-2:1"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '1', '50', '2')
+
+
+class GetPowerConsumption_50_2__2(cc_lib.types.Service):
+    local_id = "get_level:50-2:2"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_measuring_cmd(device.id, '2', '50', '2')
+
+
 class SetOnState_37(cc_lib.types.Service):
     local_id = "on:37"
 
     @staticmethod
     def task(device: Device, zway):
         return zway.run_control_cmd(device.id, '0', '37', '255')
+
+
+class SetOnState_37__1(cc_lib.types.Service):
+    local_id = "on:37:1"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_control_cmd(device.id, '1', '37', '255')
+
+
+class SetOnState_37__2(cc_lib.types.Service):
+    local_id = "on:37:2"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_control_cmd(device.id, '2', '37', '255')
 
 
 class SetOnState_38(cc_lib.types.Service):
@@ -86,6 +152,22 @@ class SetOffState_37(cc_lib.types.Service):
     @staticmethod
     def task(device: Device, zway):
         return zway.run_control_cmd(device.id, '0', '37', '0')
+
+
+class SetOffState_37__1(cc_lib.types.Service):
+    local_id = "off:37__1"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_control_cmd(device.id, '1', '37', '0')
+
+
+class SetOffState_37__2(cc_lib.types.Service):
+    local_id = "off:37:2"
+
+    @staticmethod
+    def task(device: Device, zway):
+        return zway.run_control_cmd(device.id, '2', '37', '0')
 
 
 class SetOffState_38(cc_lib.types.Service):
