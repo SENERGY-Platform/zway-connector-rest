@@ -11,47 +11,16 @@
    limitations under the License.
 """
 
-
 __all__ = ('device_type_map', 'DevoloWallPlug')
 
-
 from ..service import GetOnOffState, GetEnergyConsumption, GetPowerConsumption, SetOnState, SetOffState
-from threading import Lock
+from ..zway_device import ZwayDevice
 from ...configuration import config
-import cc_lib
 
 
-class DevoloWallPlug(cc_lib.types.Device):
+class DevoloWallPlug(ZwayDevice):
     device_type_id = config.Senergy.dt_devolo_wall_plug
     services = (GetOnOffState, GetEnergyConsumption, GetPowerConsumption, SetOnState, SetOffState)
-
-    def __init__(self, id: str, name: str, state: dict):
-        self.id = id
-        self.name = name
-        self.__state_lock = Lock()
-        self.state = state
-
-    @property
-    def state(self):
-        with self.__state_lock:
-            return self.__state
-
-    @state.setter
-    def state(self, arg):
-        with self.__state_lock:
-            self.__state = arg
-
-    def getService(self, srv_handler: str, *args, **kwargs):
-        service = super().getService(srv_handler)
-        return service.task(self, *args, **kwargs)
-
-    def __iter__(self):
-        items = (
-            ("name", self.name),
-            ("state", self.state)
-        )
-        for item in items:
-            yield item
 
 
 device_type_map = {

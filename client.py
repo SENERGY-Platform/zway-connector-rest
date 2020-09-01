@@ -61,10 +61,6 @@ device_manager = DeviceManager(zway)
 controller = Controller(device_manager, connector_client, zway)
 
 if __name__ == '__main__':
-    time.sleep(2)
-
-    zway.ensure_login()
-
     while True:
         try:
             connector_client.initHub()

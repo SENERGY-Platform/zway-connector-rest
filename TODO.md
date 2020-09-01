@@ -1,7 +1,7 @@
 # TODO
 
 * ~~Devicetype Mapping~~
-* Add ZwayDevice as intermediate class between cc lib Device and current device classes
+* ~~Add ZwayDevice as intermediate class between cc lib Device and current device classes~~
 * Devicetypes (manufacturer-manufacturerProductType-manufacturerProductId)
     - ~~2-5-373: urn:infai:ses:device-type:9ae1f9eb-ebd6-4fb5-ae1f-a03d40c500ed~~
     * ~~373-1-18: urn:infai:ses:device-type:1c200f02-67ac-42e1-8c6c-748bdc091764~~  
