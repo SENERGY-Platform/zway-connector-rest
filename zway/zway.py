@@ -36,7 +36,7 @@ endpoints = {"login": config.Zway.url + api_prefix_vdev + 'login',
              "vdevs": config.Zway.url + api_prefix_vdev + 'devices', "zwave": config.Zway.url + api_prefix_zwave,
              "zwave_cmd": config.Zway.url + '/ZWave.zway/Run/'}
 
-http_timeout = 2
+http_timeout = config.Zway.timeout
 
 
 class Zway():

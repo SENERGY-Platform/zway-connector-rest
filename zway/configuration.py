@@ -28,6 +28,7 @@ class ZwayConf:
         url = "http://localhost:8083"
         username = ""
         password = ""
+        timeout = 10
 
     @section
     class Senergy:
